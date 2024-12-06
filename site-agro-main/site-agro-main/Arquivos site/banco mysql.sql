@@ -1,8 +1,8 @@
 -- Criando o banco de dados
-CREATE DATABASE eletro_bike;
+CREATE DATABASE agro;
 
 -- Usando o banco de dados
-USE eletro_bike;
+USE agro;
 
 -- Criando a tabela usuario
 CREATE TABLE usuario (
