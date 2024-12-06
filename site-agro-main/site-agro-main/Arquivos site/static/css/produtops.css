@@ -1,0 +1,128 @@
+header {
+    background-color: #2C6B2F; /* Verde escuro */
+    color: #992929; /* Texto branco para contraste */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f5e9; /* Verde claro */
+    color: #2C6B2F; /* Verde escuro */
+    overflow-x: hidden;
+}
+
+
+
+
+
+.navbar-nav .nav-link {
+    color:  #159211  !important;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Títulos */
+.cycles_text {
+    color: #2C6B2F; /* Verde escuro */
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.lorem_text {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Estilo das Imagens */
+.image_2 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.image_2 img:hover {
+    transform: scale(1.05);
+}
+
+/* Cards de Produtos */
+.box_main, .box_main_3 {
+    padding: 20px;
+    border: 2px solid #2C6B2F; /* Verde escuro */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box_main:hover, .box_main_3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões */
+.btn {
+    background-color: #2C6B2F; /* Verde escuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1B5E20; /* Verde ainda mais escuro no hover */
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal-content {
+    background-color: #E8F5E9; /* Verde claro */
+}
+
+.modal-header, .modal-footer {
+    background-color: #2C6B2F; /* Verde escuro */
+    color: #fff;
+}
+
+/* Footer */
+.footer_section {
+    background-color: #2C6B2F; /* Verde escuro */
+    padding: 40px 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer_info a {
+    color: #fff;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.footer_info a:hover {
+    text-decoration: underline;
+}
+
+.social_icon img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer_info .call_text img {
+    width: 24px;
+    margin-right: 8px;
+}

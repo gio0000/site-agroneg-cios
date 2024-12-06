@@ -1,0 +1,325 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: #3dcc3d41; /* Fundo claro */
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+}
+
+footer.bg-light {
+    background-color: #397031; /* Azul escuro */
+}
+
+footer p {
+    color: #71bb5f; /* Branco suave */
+    font-size: 14px;
+}
+
+/* Carrossel */
+.carousel-inner img {   
+    background-color: #718878; /* Cinza claro */
+    width: 100%;
+    height: 650px;
+    object-fit: none;
+    object-position: center;
+    transition: transform 0.01s ease-in-out;
+}
+
+/* Cards de Produtos em Promoção */
+.promo-card {
+    max-width: 500px;
+    margin-bottom: 20px;
+    background-color: #2f803a; /* Branco */
+}
+
+.promo-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Cards Gerais */
+.card {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 90px;
+    text-align: center;
+    transform: scale(1.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff; /* Branco */
+}
+
+.card img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+}
+
+.card-body button {
+    background-color: #3498db; /* Azul vibrante */
+    color: #fff;
+}
+
+.card-body button:hover {
+    background-color: #2980b9; /* Azul mais escuro */
+}
+
+/* Ajustes de Colunas e Espaçamento */
+.col-md-3, .col-md-6 {
+    margin-bottom: 20px;
+}
+
+.col-md-6 {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Ajustes de Linhas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+/* Seção de Ciclos */
+.cycle_section_2, .cycle_section_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cycle_section_2 {
+    background-color: #ffffff; /* Cinza claro */
+}
+
+.cycle_section_3 {
+    background-color: #ffffff; /* Cinza médio */
+}
+
+/* Texto Justificado */
+.lorem_text, .text-justification {
+    text-align: justify; /* Justificar texto, se necessário */
+    text-indent: 20px; /* Ajuste o valor conforme a necessidade */
+}
+
+/* Botão de Contato */
+.contact_bt a {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e74c3c; /* Vermelho */
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact_bt a:hover {
+    background-color: #c0392b; /* Vermelho mais escuro */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.contact_bt a:active {
+    background-color: #e74c3c; /* Vermelho */
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+/* Estilo do Footer */
+.footer_section {
+    padding: 40px 0;
+    background-color: #2c3e50; /* Azul escuro */
+    color: #ecf0f1; /* Branco suave */
+}
+
+.footer_info {
+    margin-top: 20px;
+}
+
+.call_text {
+    display: flex;
+    align-items: center;
+}
+
+.call_text img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.call_text a {
+    color: #e74c3c; /* Vermelho */
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.call_text a:hover {
+    color: #c0392b; /* Vermelho mais escuro */
+}
+
+.social_icon ul {
+    margin-top: 20px;
+    padding: 0;
+}
+
+.social_icon ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.social_icon ul li a img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social_icon ul li a:hover img {
+    transform: scale(1.2);
+}
+
+.map_main {
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer_section {
+        padding: 30px 10px;
+    }
+    
+    .footer_info {
+        text-align: center;
+    }
+
+    .call_text {
+        justify-content: center;
+    }
+}
+
+/* Centralização de Imagem no Header */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+}
+
+.header-image {
+    max-width:800;
+    max-height: 800px;
+    object-fit: contain;
+}
+
+/* Estilizando o título Eletrobike */
+.navbar-brand {
+    font-size: 5rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #996b6b; /* Azul escuro */
+    letter-spacing: 2px; /* Espaçamento entre letras para um visual mais espaçado */
+    text-transform: uppercase; /* Deixa todas as letras maiúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave no texto */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transições suaves */
+    cursor: pointer; /* Indica que é clicável */
+    margin-left: auto; /* Move o título para a direita */
+    padding-left: 30px; /* Adiciona espaçamento à esquerda */
+}
+
+.navbar-brand:hover {
+    color: #e74c3c; /* Vermelho */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
+    transform: scale(1.05); /* Leve efeito de zoom */
+}
+
+.navbar-text {
+    font-family: 'Arial', sans-serif; /* Define a fonte */
+    font-size: 1.6rem; /* Define o tamanho do texto */
+    color: #fff; /* Define a cor do texto (branco, por exemplo, para contrastar com fundos escuros) */
+    background-color: #007bff; /* Fundo azul */
+    padding: 5px 10px; /* Adiciona espaçamento interno ao texto */
+    border-radius: 5px; /* Arredonda os cantos do fundo */
+    justify-content: center;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Negrito para destacar */
+    color: #af2222; /* Azul escuro */
+    padding: 10px 20px; /* Espaçamento interno para os botões */
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    border-radius: 30px; /* Bordas arredondadas para parecerem botões */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    margin-right: 15px; /* Espaço entre os itens de navegação */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.image-container-fluid {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    background-color: #f0f0f0;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100%;
+    text-align: center;
+}
+
+.images{    
+    display: flex;
+    justify-content: center;
+}
+
+.header-image-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.navbar-nav .nav-item {
+    list-style: none;
+    padding: 10px 15px;
+}

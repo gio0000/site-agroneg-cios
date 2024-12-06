@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroNews</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .navbar {
+      background-color: #2d572c;
+    }
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff !important;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #cddc39 !important;
+    }
+    .news-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    .news-card {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+      background-size: cover;
+      background-position: center;
+      height: 200px; /* Ajuste a altura conforme necessário */
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+    .news-card .card-body {
+      background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
+      color: white;
+      padding: 15px;
+    }
+    .footer {
+      background-color: #2d572c;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}">AgroNegócios</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+          </li>
+          {% if usuario %}
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+          {% else %}
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+          {% endif %}
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('equipamentos') }}">Modelos</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('sobre') }}">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('noticias') }}">Notícias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Notícias do Agronegócio -->
+  <section class="news-section">
+    <div class="container">
+      <h1 class="text-center mb-5">Últimas Notícias do Agronegócio</h1>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card news-card" style="background-image: url('{{ url_for('static', filename='images/soja.jpg') }}');">
+            <div class="card-body">
+              <h5 class="card-title">Colheita de Soja Bate Recorde em 2024</h5>
+              <p class="card-text">O Brasil atingiu um recorde histórico na colheita de soja, com mais de 150 milhões de toneladas colhidas, consolidando-se como o maior produtor mundial.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card news-card" style="background-image: url('{{ url_for('static', filename='images/inovação.jpg') }}');">
+          <div class="card-body">
+              <h5 class="card-title">Inovações Tecnológicas Impulsionam a Produção</h5>
+              <p class="card-text">Drones, inteligência artificial e automação estão revolucionando a gestão de lavouras, aumentando a produtividade e reduzindo custos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card news-card" style="background-image: url('{{ url_for('static', filename='images/sus.jpg') }}');">
+          <div class="card-body">
+              <h5 class="card-title">Sustentabilidade no Agronegócio Brasileiro</h5>
+              <p class="card-text">Práticas sustentáveis têm sido adotadas em diversas regiões, visando a preservação ambiental e o uso consciente dos recursos naturais.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Novos Cards -->
+        <div class="col-md-4">
+          <div class="card news-card" style="background-image: url('{{ url_for('static', filename='images/digital.jpg') }}');">            <div class="card-body">
+              <h5 class="card-title">Agronegócio e a Digitalização</h5>
+              <p class="card-text">O setor agrícola está adotando a digitalização em suas operações, com o uso de aplicativos e plataformas online para otimizar a gestão e aumentar a produtividade.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card news-card" style="background-image: url('{{ url_for('static', filename='images/garo.webp') }}');">            <div class="card-body">
+              <h5 class="card-title">Exportação de Grãos Cresce 10% em 2024</h5>
+              <p class="card-text">A exportação de grãos brasileiros atingiu um novo recorde, com destaque para a soja, milho e arroz, impulsionados pela alta demanda internacional.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card news-card" style="background-image: url('{{ url_for('static', filename='images/tec.jpg') }}');">            <div class="card-body">
+              <h5 class="card-title">Tecnologia e a Nova Era da Pecuária</h5>
+              <p class="card-text">Com o uso de sensores e dados em tempo real, a pecuária brasileira está evoluindo, melhorando o manejo e a eficiência na produção de carne e leite.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

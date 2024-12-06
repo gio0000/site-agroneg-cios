@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroTech - Produtos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/produtops.css') }}">
+  <style>
+    .lorem_text {
+      text-align: justify;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .product-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2d572c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">AgroTech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            {% if session.get('usuario') %}
+              <li class="nav-item">
+                <span class="navbar-text">Bem-vindo, {{ session['usuario'] }}</span>
+              </li>
+            {% endif %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('index') }}">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('equipamentos') }}">Modelos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('sobre') }}">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('noticias') }}">Notícias</a>
+            </li>
+            {% if session.get('usuario') %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/teste.webp') }}" alt="Trator Força Agro" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2 class="product-title">Trator Força Agro</h2>
+        <p class="lorem_text">
+          O Trator Força Agro é a solução definitiva para enfrentar terrenos desafiadores com desempenho excepcional. Equipado com tecnologia de ponta, este trator proporciona alta eficiência e robustez para todas as operações agrícolas. Seu design foi meticulosamente desenvolvido para garantir durabilidade, produtividade e fácil manuseio, tornando-o a escolha ideal para quem busca performance em todos os aspectos da agricultura moderna.
+        </p>
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-md-6">
+        <h2 class="product-title">Colheitadeira AgroMax</h2>
+        <p class="lorem_text">
+          A Colheitadeira AgroMax redefine o conceito de colheita eficiente e precisa. Projetada com um sistema de alta performance, ela garante uma colheita rápida e eficaz, adaptando-se perfeitamente a diferentes tipos de culturas. Seu design ergonômico e a integração de tecnologias inovadoras asseguram uma operação sem falhas, proporcionando resultados consistentes e maximizando a produtividade no campo.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/colheitadera.jpg') }}" alt="Colheitadeira AgroMax" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/semeadora.jpg') }}" alt="Semeadora Precision Agro" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2 class="product-title">Semeadora Precision Agro</h2>
+        <p class="lorem_text">
+          A Semeadora Precision Agro é a escolha ideal para garantir uma distribuição uniforme de sementes com alta precisão. Seu sistema avançado de controle de semeadura permite a otimização do uso das sementes, garantindo uma plantação de alta qualidade e maximizando a produtividade. Perfeita para diversas culturas, ela assegura um crescimento saudável das plantas desde o início, promovendo uma colheita de excelência.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-5">
+    <div class="col-md-6">
+      <h2 class="product-title">Arado SuperWaste</h2>
+      <p class="lorem_text">
+        O Arado SuperWaste é uma máquina agrícola fundamental para preparar o solo para o plantio. Sua principal função é romper e revolver a terra, criando sulcos que melhoram a aeração do solo e favorecem a mistura de resíduos orgânicos, promovendo uma maior fertilidade. Ideal para diferentes tipos de solo, esse arado ajuda no controle de ervas daninhas, reduzindo a compactação do solo e melhorando as condições para o crescimento das raízes. Sua robustez e eficiência são essenciais para o sucesso de qualquer operação agrícola.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img src="{{ url_for('static', filename='images/arado.jpg') }}" alt="Arado SuperWaste" class="img-fluid">
+    </div>
+  </div>
+
+  <div class="row my-5">
+    <div class="col-md-6">
+      <img src="{{ url_for('static', filename='images/pulverizadora.webp') }}" alt="Pulverizadora AgroTech" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <h2 class="product-title">Pulverizadora AgroTech</h2>
+      <p class="lorem_text">
+        A Pulverizadora AgroTech é um equipamento projetado para otimizar a aplicação de fertilizantes líquidos, herbicidas e defensivos agrícolas, garantindo uma distribuição uniforme e eficiente. Seu sistema de pulverização de alta precisão assegura que o tratamento seja aplicado de forma precisa, minimizando desperdícios e maximizando a eficácia dos produtos. Ideal para diversas culturas, ela é uma ferramenta indispensável para manter a saúde e produtividade das plantações.
+      </p>
+    </div>
+  </div>
+
+  <footer class="bg-light text-center py-3">
+    <p class="mb-0">AGRO Ltda - Direitos Autorais - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
